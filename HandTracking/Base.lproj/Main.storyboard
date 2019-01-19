@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J9Y-Ml-51k">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hand Tracking View Controller-->
+        <scene sceneID="DIf-zS-K1V">
+            <objects>
+                <viewController id="J9Y-Ml-51k" customClass="HandTrackingViewController" customModule="ARFaceDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="22e-u4-Xcy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKw-ha-v5r" customClass="PreviewView" customModule="ARFaceDetection" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="VKw-ha-v5r" firstAttribute="trailing" secondItem="22e-u4-Xcy" secondAttribute="trailing" id="6gH-mr-YU7"/>
+                            <constraint firstItem="VKw-ha-v5r" firstAttribute="leading" secondItem="22e-u4-Xcy" secondAttribute="leading" id="Hhm-hD-gI2"/>
+                            <constraint firstItem="VKw-ha-v5r" firstAttribute="bottom" secondItem="22e-u4-Xcy" secondAttribute="bottom" id="Yem-Or-tAs"/>
+                            <constraint firstItem="VKw-ha-v5r" firstAttribute="top" secondItem="22e-u4-Xcy" secondAttribute="top" id="udb-aP-zBn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ays-Bv-Vf4"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="VKw-ha-v5r" id="VtZ-fK-HTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnD-Q9-9Tn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="tSS-GI-8px">
+                    <connections>
+                        <action selector="scan" destination="J9Y-Ml-51k" id="lcz-NZ-wHb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-952.79999999999995" y="44.527736131934034"/>
+        </scene>
+    </scenes>
+</document>
